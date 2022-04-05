@@ -1,0 +1,54 @@
+CREATE TABLE `course` (
+  `id` int NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `startDate` varchar(45) DEFAULT NULL,
+  `endDate` varchar(45) DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
+  `teacherId` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+CREATE TABLE `coursestudent` (
+  `id` int NOT NULL,
+  `courseId` int NOT NULL,
+  `marksOne` varchar(255) DEFAULT NULL,
+  `marksTwo` varchar(255) DEFAULT NULL,
+  `studentId` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+CREATE TABLE `student` (
+  `id` int NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `firstName` varchar(255) DEFAULT NULL,
+  `lastName` varchar(255) DEFAULT NULL,
+  `mobileNumber` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `teacher` (
+  `id` int NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `datejoined` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `firstName` varchar(255) DEFAULT NULL,
+  `lastName` varchar(255) DEFAULT NULL,
+  `mobileNumber` varchar(255) DEFAULT NULL,
+  `userName` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `users` (
+  `id` int NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
